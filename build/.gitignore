@@ -4,3 +4,7 @@
 !.gitignore
 !simplesim-3.0
 !simplesim-3.0/**/*
+!spec2000*
+!spec2000*/**/*
+!runscripts
+!runscripts/**/*
