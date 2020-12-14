@@ -65,12 +65,12 @@ verifyBenchmarkName () {
     for path in /root/build/spec2000args/*; do
         [ -d "${path}" ] || continue # if not a directory, skip
         benchmark="$(basename "${path}")" # get benchmark as variable
-        if [ $1 -eq $benchmark ]; then
-            return true
+        if [ "${1}" = "${benchmark}" ]; then
+            return 0
         fi
     done
 
-    return false
+    return 1
 }
 
 start=`date +%s`
