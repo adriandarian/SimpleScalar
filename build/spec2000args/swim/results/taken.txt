@@ -8,7 +8,7 @@ of SimpleScalar, LLC (info@simplescalar.com).
 warning: section `.comment' ignored...
 sim: command line: /root/build/simplesim-3.0/sim-outorder -max:inst 50000000 -fastfwd 20000000 -redir:sim /root/build/spec2000args/swim/results/taken.txt -bpred taken -bpred:ras 8 -bpred:btb 64 2 /root/build/spec2000binaries/swim00.peak.ev6 
 
-sim: simulation started @ Mon Dec 14 09:52:15 2020, options follow:
+sim: simulation started @ Mon Dec 14 10:25:05 2020, options follow:
 
 sim-outorder: This simulator implements a very detailed out-of-order issue
 superscalar processor with a two-level memory system and speculative
