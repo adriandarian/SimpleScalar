@@ -11,6 +11,7 @@ if [ $# -eq 0 ]; then
 fi
 
 # Declare Initial variables
+BENCHMARK="all" # Default is to run all benchmarks
 BRANCHPREDICTION="all" # Default branch prediction is to run all predictions
 INSTANCE=50000000 # MAX:INSTANCE
 FASTFORWARD=20000000 # FAST:FORWARD
@@ -24,17 +25,17 @@ W=4 # 2Level: Branch History Table Width
 X=0 # 2Level: XoR
 MTS=256 # COMB: Meta Table Size
 
-while [[ $# -gt 0 ]]; do
+while [ $# -gt 0 ]; do
     case $1 in
         -b|--benchmark) BENCHMARK="$2"; shift ;;
         -p|--branch-prediction|--prediction) BRANCHPREDICTION="$2"; shift ;;
-        -i|--instance) INSTANCE="$2"; shift ;;
-        -f|--fast-forward) FASTFORWARD="$2"; shift ;;
-        --btb) NUMSETS="$2"; ASSOCIATIVITY="$3"; shift ;;
-        --ras) RAS="$2"; shift ;;
-        --bimod) TABLESIZE="$2"; shift ;;
-        --two-level) N="$2"; M="$3"; W="$4"; X="$5"; shift ;;
-        -c|--comb) MTS="$2"; shift ;;
+        -i|--instance) INSTANCE=$2; shift ;;
+        -f|--fast-forward) FASTFORWARD=$2; shift ;;
+        --btb) NUMSETS=$2; ASSOCIATIVITY=$3; shift ;;
+        --ras) RAS=$2; shift ;;
+        --bimod) TABLESIZE=$2; shift ;;
+        --two-level) N=$2; M=$3; W=$4; X=$5; shift ;;
+        -c|--comb) MTS=$2; shift ;;
         *) echo "Unknown Option."; exit 2 ;;
     esac
     shift
